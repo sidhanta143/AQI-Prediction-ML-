@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India AQI Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    {% include 'Nav.html' %}
+
+    <!-- Hero Section -->
+    <section class="container">
+        <div class="head">
+            <h1>India Air Quality Prediction</h1>
+            <p>ML-Based Prediction Model for Better Environmental Decisions</p>
+
+            <a href="/prediction" class="btn">Predict AQI</a>
+            <a href="/visualization" class="btn btn2">View Dashboard</a>
+        </div>
+    </section>
+
+    <!-- About Section  -->
+     <section class="about">
+        {%include 'About.html' %}
+    </section>
+        
+</body>
+</html>

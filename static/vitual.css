@@ -1,0 +1,283 @@
+/* =========================
+   Global
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:55px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 60px;
+
+    background:#4e5f79;
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
+
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.logo:hover{
+    color:#6d68c7;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    padding:10px 16px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active{
+    background:rgb(89, 122, 184);
+    color:#cfd2d7;
+}
+
+/* =========================
+   Mobile Menu
+========================= */
+
+#menu-toggle{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
+
+/* =========================
+   Header
+========================= */
+
+header{
+    background:linear-gradient(135deg,#0d6efd,#2563eb);
+    color:white;
+    text-align:center;
+
+    padding:120px 20px 60px;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:20px;
+    opacity:.95;
+}
+
+/* =========================
+   Main Container
+========================= */
+
+.container{
+
+    width:90%;
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:30px;
+
+}
+
+/* =========================
+   Cards
+========================= */
+
+.card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.card h2{
+
+    text-align:center;
+
+    color:#0d6efd;
+
+    margin-bottom:20px;
+
+}
+
+.card img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    border:2px solid #e5e7eb;
+
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+    margin-top:50px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    font-size:16px;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        padding:15px 20px;
+
+        height:auto;
+
+        flex-wrap:wrap;
+
+    }
+
+    .menu-icon{
+
+        display:block;
+
+        margin-left:auto;
+
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        width:100%;
+
+        background:#0d6efd;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:0;
+
+        padding:20px 0;
+
+    }
+
+    .nav-links li{
+
+        margin:10px 0;
+
+    }
+
+    #menu-toggle:checked ~ .nav-links{
+
+        display:flex;
+
+    }
+
+    header{
+
+        padding-top:140px;
+
+    }
+
+    header h1{
+
+        font-size:32px;
+
+    }
+
+    header p{
+
+        font-size:17px;
+
+    }
+
+    .container{
+
+        width:95%;
+
+        grid-template-columns:1fr;
+
+    }
+
+}

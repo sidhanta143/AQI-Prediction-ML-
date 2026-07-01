@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AQI Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    {% include 'Nav.html' %}
+
+    <!-- Header -->
+    <div class="about-header">
+        <h1>About This AQI Project</h1>
+        <p>Understanding Air Quality Prediction Using Machine Learning.</p>
+        <br>
+        <p>The AQI Prediction Using Machine Learning project predicts the Air Quality Index based on pollutant data, including PM2.5, PM10, NO₂, SO₂, CO, and O₃. A trained machine learning model analyzes these inputs and estimates the AQI. Built with Python and Flask, the system provides accurate, fast, and user-friendly air quality prediction.</p>
+    </div>
+
+
+   <section class="project-section">
+
+    <div class="project-left">
+        <h1>What is This Project?</h1>
+        <h3>
+            The Air Quality Prediction System is a Machine Learning-based web
+            application designed to predict the Air Quality Index (AQI) using
+            environmental and air pollution data...
+        </h3>
+    </div>
+
+    <div class="project-right">
+        <img src="{{ url_for('static', filename='lungs.png') }}" alt="Lungs">
+
+        <h2>Health Impact</h2>
+
+        <p>
+            Air pollution has a significant impact on human health and is one
+            of the leading environmental risk factors worldwide...
+        </p>
+    </div>
+
+</section>
+
+        <h1 style="align-items: center; display: flex; justify-content: center; margin-top: 8%; color: cornflowerblue;">Machine Learning Model</h1>
+
+    <!-- About Section -->
+    <section class="about-page">
+
+        <div class="about-box">
+            <h2>Algorithm</h2>
+            <p>
+               Random Forest is a Machine Learning algorithm that uses many decision trees to predict AQI. It analyzes pollution data such as PM2.5, PM10, NO₂, SO₂, CO, and O₃ to provide accurate and reliable air quality predictions.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <h2>💹Performance</h2>
+            <h3> R² score of 0.99687</h3>
+            <p>
+        
+        indicating excellent prediction accuracy. This high score shows 
+        that the model predicts the Air Quality Index (AQI) very accurately 
+        and provides reliable results for the given pollution data.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <h2>Feature Used</h2>
+            <p>
+             PM2.5, PM10, NO₂, SO₂, CO, and O₃ 
+            </p>
+        </div>
+
+
+    </section>
+    {% include 'Tech.html' %}
+
+</body>
+</html>

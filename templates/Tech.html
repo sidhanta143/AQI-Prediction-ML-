@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="Tech">
+   <h1>Technology stack</h1>
+
+   
+    <section class="page">
+        
+         
+    <div class="box">
+        <img src="/static/python.png" alt="python">
+        <h2>Python</h2>
+    <p>Core Progrmming language.</p>
+    </div>
+
+    <div class="box">
+        <img src="/static/flask.webp" alt="">
+        <h2>Flask</h2>
+    <p>Web-Frame Work</p>
+    </div>
+
+    <div class="box">
+        <img src="/static/logo-sklearn.png" alt="">
+        <h2>Scikit Learn</h2>
+        <p>Machine Learning .</p>
+
+    </div> 
+    <div class="box">
+        <img src="/static/library.jpeg" alt="">
+        <h2>Pandas , Numpy & Matplotpli </h2>
+        <p>Data preprocessing and Data Visualization .</p>
+
+    </div> 
+    <div class="box">
+        <img src="/static/html.png" alt="">
+        <h2>HTML & CSS</h2>
+        <P>webpage Building .</P>
+
+    </div> 
+       
+    </section>
+    </div>
+     {% include 'Footer.html' %}
+    
+
+</body>
+</html>

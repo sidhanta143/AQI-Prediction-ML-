@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Visualization</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vitual.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>AQI Prediction</h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/About">About</a></li>
+            <li><a href="/visualization" class="active">Visualization</a></li>
+            <li><a href="/predict">Predict</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>AQI Data Visualization Dashboard</h1>
+        <p>Air Quality Analysis using Machine Learning</p>
+    </header>
+
+    <!-- Charts -->
+    <div class="container">
+
+        <div class="card">
+            <h2>Average Pollutants</h2>
+            <img src="{{ url_for('static', filename='Bar.png') }}" alt="Bar Chart">
+        </div>
+
+        <div class="card">
+            <h2>AQI Distribution</h2>
+            <img src="{{ url_for('static', filename='histogram.png') }}" alt="Histogram">
+        </div>
+
+        <div class="card">
+            <h2>Pie Chart</h2>
+            <img src="{{ url_for('static', filename='image.png') }}" alt="Pie Chart">
+        </div>
+
+        <div class="card">
+            <h2>Scatter Plot</h2>
+            <img src="{{ url_for('static', filename='scatter.png') }}" alt="Scatter Plot">
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AQI Prediction Project | Data Visualization Dashboard</p>
+    </footer>
+
+</body>
+</html>

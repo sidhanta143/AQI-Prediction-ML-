@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
+</head>
+<body>
+
+    {% include 'Nav.html' %}
+
+    <!-- Prediction Header -->
+    <section class="prediction-header">
+        <h1>AQI Prediction</h1>
+        <p>Enter the pollution parameters to predict the Air Quality Index.</p>
+    </section>
+
+    <!-- Prediction Form -->
+    <section class="prediction-page">
+
+        <div class="prediction-box">
+
+            <form action="/predict" method="POST">
+
+                <div class="input-group">
+                    <label>PM2.5 (µg/m³)</label>
+                    <input type="number" step="0.01" name="pm25" placeholder="Enter PM2.5" required>
+                </div>
+
+                <div class="input-group">
+                    <label>PM10 (µg/m³)</label>
+                    <input type="number" step="0.01" name="pm10" placeholder="Enter PM10" required>
+                </div>
+
+                <div class="input-group">
+                    <label>NO₂ (µg/m³)</label>
+                    <input type="number" step="0.01" name="no2" placeholder="Enter NO₂" required>
+                </div>
+
+                <div class="input-group">
+                    <label>SO₂ (µg/m³)</label>
+                    <input type="number" step="0.01" name="so2" placeholder="Enter SO₂" required>
+                </div>
+
+                <div class="input-group">
+                    <label>CO (mg/m³)</label>
+                    <input type="number" step="0.01" name="co" placeholder="Enter CO" required>
+                </div>
+
+                <div class="input-group">
+                    <label>O₃ (µg/m³)</label>
+                    <input type="number" step="0.01" name="o3" placeholder="Enter O₃" required>
+                </div>
+
+                <button type="submit" class="predict-btn">
+                    Predict AQI
+                </button>
+
+            </form>
+
+            {% if Prediction %}
+    <div class="result">
+        <h2>Predicted AQI</h2>
+        <h1>{{ Prediction }}</h1>
+    </div>
+    {% endif %}
+
+        </div>
+       
+    </section>
+   <!-- <img src="{{ url_for('static', filename='chart.png') }}" alt="AQI Chart"> -->
+</body>
+</html>
