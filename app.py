@@ -22,7 +22,7 @@ def About():
 
 @app.route("/predict")
 def prediction():
-    return render_template("prediction.html")
+    return render_template("Prediction.html")
 
 
 @app.route("/visualization")
@@ -44,7 +44,7 @@ def predict():
 
     result = round(Prediction[0], 2)
 
-    return render_template("prediction.html", Prediction=result)
+    return render_template("Prediction.html", Prediction=result)
 
 
 
