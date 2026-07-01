@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 app = Flask(__name__)
 
 # Load trained model
-model = pickle.load(open("model.pkl", "rb"))
+model = pickle.load(open("model (1).pkl", "rb"))
 
 @app.route("/")
 def home():
